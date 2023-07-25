@@ -1,0 +1,15 @@
+local:
+  sqlserver:
+    server: ".\\SQL19"
+    dbname: "GoDB"
+    user: "sa"
+    password: "1"
+  postgre:
+    host: "localhost"
+    port: "5432"
+    password: "123456"
+    user: "erol"
+    dbname: "test_db"
+    sslmode: "disable"
+  api:
+    port: ":7071"
