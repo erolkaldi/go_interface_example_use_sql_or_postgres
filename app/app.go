@@ -1,7 +1,6 @@
 package app
 
 import (
-	"cmd/main.go/database"
 	"cmd/main.go/models"
 	"fmt"
 	"log"
@@ -17,11 +16,9 @@ type App struct {
 	Config *models.Config
 }
 
-func (app *App) InitializeDB() bool {
+func (app *App) InitializeDB(db models.BaseDb) bool {
 	app.Config = &models.Config{}
 	app.Config.GetConfigValues()
-	var db models.BaseDb
-	db = &database.Postgress{}
 	var err error
 	app.Db, err = db.Connect(app.Config)
 	if err != nil {
