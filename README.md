@@ -2,6 +2,6 @@
 
 In this example you can switch database sql or postgres by just changing one line of code 
 
-app.go line 24
+main.go line 10
 
-db = &database.Postgress{} or db = &database.SqlServer{}
+if a.InitializeDB(&database.Postgress{}) or if a.InitializeDB(&database.SqlServer{})
